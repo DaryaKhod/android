@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final Button button1 = findViewById(R.id.button1);
         final Button button2 = findViewById(R.id.button2);
+        final Button button3 = findViewById(R.id.button3);
         final TextView text = findViewById(R.id.text1);
         final TextView text2 = findViewById(R.id.text2);
 
@@ -36,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 jz++;
                 button2.setText("PRESSED");
+                text2.setText(Integer.toString(jz));
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jz=0;
+                j=0;
+                text.setText(Integer.toString(j));
                 text2.setText(Integer.toString(jz));
             }
         });
